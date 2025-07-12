@@ -1,9 +1,9 @@
-# requirements.txt for your Customer Churn Streamlit App
+# requirements.txt for your Customer Churn Streamlit App (fixed)
 
-streamlit
-pandas
-numpy
-scikit-learn
-joblib
-matplotlib
-seaborn
+streamlit>=1.34.0
+pandas>=2.0.0
+numpy>=1.25.0
+scikit-learn>=1.4.0
+joblib>=1.3.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
