@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import sklearn
 
 # Load trained model using pickle
 with open('customer_churn_model.pkl', 'rb') as file:
