@@ -5,6 +5,10 @@ import pandas as pd
 import numpy as np
 import pickle
 import sklearn
+import sklearn.ensemble
+import sklearn.preprocessing
+import sklearn.tree
+
 
 # Load trained model using pickle
 with open('customer_churn_model.pkl', 'rb') as file:
