@@ -1,0 +1,9 @@
+# requirements.txt for your Customer Churn Streamlit App
+
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+matplotlib
+seaborn
