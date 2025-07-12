@@ -1,12 +1,13 @@
-# app.py for Customer Churn Prediction using Streamlit
+# app.py for Customer Churn Prediction using Streamlit and pickle
 
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
+import pickle
 
-# Load trained model
-model = joblib.load('customer_churn_model.pkl')
+# Load trained model using pickle
+with open('customer_churn_model.pkl', 'rb') as file:
+    model = pickle.load(file)
 
 st.set_page_config(page_title='Customer Churn Prediction', layout='centered')
 st.title('📊 Customer Churn Prediction App')
@@ -31,7 +32,7 @@ def user_input():
     Contract = st.selectbox('Contract Type', [0, 1, 2], format_func=lambda x: 'Month-to-Month' if x==0 else 'One Year' if x==1 else 'Two Year')
     PaperlessBilling = st.selectbox('Paperless Billing', [0, 1], format_func=lambda x: 'Yes' if x==1 else 'No')
     PaymentMethod = st.selectbox('Payment Method', [0, 1, 2, 3], format_func=lambda x: 'Bank Transfer' if x==0 else 'Credit Card' if x==1 else 'Electronic Check' if x==2 else 'Mailed Check')
-    
+
     data = {
         'tenure': tenure,
         'MonthlyCharges': MonthlyCharges,
